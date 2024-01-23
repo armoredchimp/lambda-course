@@ -1,0 +1,3 @@
+Invoke:
+
+aws lambda invoke --function-name my-function --cli-binary-format raw-in-base64-out --payload '{ "key": "value" }' response.json
