@@ -1,0 +1,1 @@
+{"errorType":"ReferenceError","errorMessage":"n2 is not defined","trace":["ReferenceError: n2 is not defined","    at Runtime.exports.handler (/var/task/index.js:2:57)","    at Runtime.handleOnceNonStreaming (/var/runtime/Runtime.js:74:25)"]}

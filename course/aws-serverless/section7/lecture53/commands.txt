@@ -1,0 +1,24 @@
+Update Function with Dependencies:
+
+1 install required Dependencies
+2 zip function code
+3 update lambda function with cli
+4 invoke updated function with cli
+
+1
+npm install aws-xray-sdk
+
+2
+Manually zip function by right-clicking, include both package.json and package-lock.json and /node_modules
+
+3
+aws lambda update-function-code `
+--function-name my-function2 `
+--zip-file fileb://function.zip
+
+4
+aws lambda invoke `
+--function-name my-function2 `
+--cli-binary-format raw-in-base64-out `
+--payload file://event.json `
+response.json

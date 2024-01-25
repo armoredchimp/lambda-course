@@ -1,0 +1,15 @@
+aws logs describe-log-groups `
+--query logGroups[*].logGroupName
+
+
+List log streams for a group:
+
+aws logs describe-log-streams `
+--log-group-name '/aws/lambda/my-function2' `
+--query logStreams[*].logStreamName
+
+Get log events for that stream:
+
+aws logs get-log-events `
+--log-group-name '/aws/lambda/my-function2' `
+--log-stream-name '2024/01/25/[$LATEST]1a58019829a4466f919f66ade4ce7aa0'
