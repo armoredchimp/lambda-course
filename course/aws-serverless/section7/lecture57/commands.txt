@@ -1,0 +1,11 @@
+Configure environment variables with API
+
+aws lambda update-function-configuration `
+--function-name my-function3 `
+--environment "Variables={BUCKET=my-bucket,KEY=file.txt}"
+
+
+Get current config and environment variables:
+
+aws lambda get-function-configuration `
+--function-name my-function3

@@ -1,0 +1,11 @@
+Check lambda details with cli
+aws lambda list-functions `
+--max-items 10
+
+aws lambda get-function `
+--function-name my-function2
+
+Delete
+
+aws lambda delete-function `
+--function-name my-function2

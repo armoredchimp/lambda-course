@@ -1,0 +1,16 @@
+Code
+
+Zip
+Compress-Archive index.js function.zip
+
+Update
+aws lambda update-function-code `
+--function-name my-function3 `
+--zip-file fileb://function.zip
+
+Invoke with json
+aws lambda invoke `
+--function-name my-function3 `
+--cli-binary-format raw-in-base64-out `
+--payload file://event.json `
+response.json
