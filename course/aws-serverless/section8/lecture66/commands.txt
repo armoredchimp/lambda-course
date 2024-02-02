@@ -1,0 +1,45 @@
+1 design event
+2 develop lambda code
+3 zip lambda 
+4 create lambda with cli
+5 invoke lambda with cli
+
+
+0
+create event.json
+
+1
+index.js
+
+2
+
+3
+Compress-Archive index.js function.zip
+
+4
+aws iam get-role --role-name lambda-ex
+
+arn:aws:iam::915385912796:role/lambda-ex
+
+aws lambda create-function `
+--function-name calculator `
+--runtime nodejs14.x `
+--zip-file fileb://function.zip `
+--handler index.handler `
+--role arn:aws:iam::915385912796:role/lambda-ex
+
+
+5
+aws lambda invoke `
+--function-name calculator `
+--cli-binary-format raw-in-base64-out `
+--payload file://event.json `
+response.json
+
+ASYNC:
+aws lambda invoke `
+--function-name calculator `
+--invocation-type Event `
+--cli-binary-format raw-in-base64-out `
+--payload file://event.json `
+response.json
