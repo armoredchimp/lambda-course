@@ -1,0 +1,26 @@
+1 Develop Code
+2 zip Code
+3 create lambda with cli
+4 invoke lambda with cli
+
+2
+Compress-Archive index.js function.zip
+
+3
+aws iam get-role --role-name lambda-ex
+
+arn:aws:iam::915385912796:role/lambda-ex
+
+4
+aws lambda create-function `
+--function-name greeting `
+--runtime nodejs14.x `
+--zip-file fileb://function.zip `
+--handler index.handler `
+--role arn:aws:iam::915385912796:role/lambda-ex
+
+aws lambda invoke `
+--function-name greeting `
+--cli-binary-format raw-in-base64-out `
+--payload file://event.json `
+response.json
