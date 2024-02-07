@@ -1,0 +1,15 @@
+Compress-Archive index.js function.zip
+
+aws iam get-role --role-name lambda-ex
+arn:aws:iam::915385912796:role/lambda-ex
+
+aws lambda create-function `
+--function-name calculator2 `
+--runtime nodejs14.x `
+--zip-file fileb://function.zip `
+--handler index.handler `
+--role arn:aws:iam::915385912796:role/lambda-ex
+
+aws lambda create-function-url-config `
+--function-name calculator2 `
+--auth-type NONE

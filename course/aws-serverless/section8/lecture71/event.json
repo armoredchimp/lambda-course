@@ -1,0 +1,41 @@
+{
+  "version": "2.0",
+  "routeKey": "$default",
+  "rawPath": "/",
+  "rawQueryString": "",
+  "headers": {
+    "content-length": "39",
+    "x-amzn-tls-version": "TLSv1.2",
+    "x-forwarded-proto": "https",
+    "postman-token": "59e2e53a-fcd5-42c9-9917-654024e0609b",
+    "x-forwarded-port": "443",
+    "x-forwarded-for": "76.32.121.10",
+    "accept": "*/*",
+    "x-amzn-tls-cipher-suite": "ECDHE-RSA-AES128-GCM-SHA256",
+    "x-amzn-trace-id": "Root=1-65c2fb9f-2fab21406593ae0a4827e816",
+    "host": "samioacoygekkcnfxjkfp4zptm0bhcll.lambda-url.us-west-1.on.aws",
+    "content-type": "application/json",
+    "accept-encoding": "gzip, deflate, br",
+    "user-agent": "PostmanRuntime/7.36.1"
+  },
+  "requestContext": {
+    "accountId": "anonymous",
+    "apiId": "samioacoygekkcnfxjkfp4zptm0bhcll",
+    "domainName": "samioacoygekkcnfxjkfp4zptm0bhcll.lambda-url.us-west-1.on.aws",
+    "domainPrefix": "samioacoygekkcnfxjkfp4zptm0bhcll",
+    "http": {
+      "method": "POST",
+      "path": "/",
+      "protocol": "HTTP/1.1",
+      "sourceIp": "76.32.121.10",
+      "userAgent": "PostmanRuntime/7.36.1"
+    },
+    "requestId": "1f6714b6-7da2-46ba-811e-b398d00ee8a2",
+    "routeKey": "$default",
+    "stage": "$default",
+    "time": "07/Feb/2024:03:40:15 +0000",
+    "timeEpoch": 1707277215473
+  },
+  "body": "{\r\n  \"a\": 2,\r\n  \"b\": 5,\r\n  \"op\": \"-\"\r\n}",
+  "isBase64Encoded": false
+}
